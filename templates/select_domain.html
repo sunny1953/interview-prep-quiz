@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Select Domain{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Choose the domain you want to practice</h1>
+
+    <!-- Software & Tech Section -->
+    <div class="domain-section">
+        <h2>Software & Tech</h2>
+        <div class="domain-grid">
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Software Development">
+                <span>Software Development</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Data Science">
+                <span>Data Science</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Machine Learning">
+                <span>Machine Learning</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Cybersecurity">
+                <span>Cybersecurity</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="System Design">
+                <span>System Design</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="DevOps">
+                <span>DevOps</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Cloud Computing">
+                <span>Cloud Computing</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Communication Section -->
+    <div class="domain-section">
+        <h2>Communication</h2>
+        <div class="domain-grid">
+            <label class="domain-option">
+                <input type="radio" name="domain" value="English Communication">
+                <span>English Communication</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- 3D & Game Development Section -->
+    <div class="domain-section">
+        <h2>3D & Game Development</h2>
+        <div class="domain-grid">
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Unity Development">
+                <span>Unity Development</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Unreal Engine">
+                <span>Unreal Engine</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Blender">
+                <span>Blender</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Autodesk Maya">
+                <span>Autodesk Maya</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="3D Modeling">
+                <span>3D Modeling</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- XR Development Section -->
+    <div class="domain-section">
+        <h2>XR Development</h2>
+        <div class="domain-grid">
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Augmented Reality">
+                <span>Augmented Reality</span>
+            </label>
+            <label class="domain-option">
+                <input type="radio" name="domain" value="Virtual Reality">
+                <span>Virtual Reality</span>
+            </label>
+        </div>
+    </div>
+
+    <button id="start-quiz" class="cta-button">Start Quiz</button>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function() {
+    $('#start-quiz').click(function() {
+        const selectedDomain = $('input[name="domain"]:checked').val();
+        if (!selectedDomain) {
+            alert('Please select a domain to continue');
+            return;
+        }
+        window.location.href = `/quiz?domain=${encodeURIComponent(selectedDomain)}`;
+    });
+});
+</script>
+{% endblock %} 

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Prepare for Your Dream Job</h1>
+    <p class="subtitle">Interactive quiz system for technical interviews across multiple domains</p>
+    <a href="/select_domain" class="cta-button">Start Quiz</a>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <h3>Multiple Domains</h3>
+        <p>From Software Development to AR/VR, prepare for various tech fields</p>
+    </div>
+    <div class="feature-card">
+        <h3>Adaptive Learning</h3>
+        <p>Questions adapt to your performance level</p>
+    </div>
+    <div class="feature-card">
+        <h3>Detailed Explanations</h3>
+        <p>Get comprehensive explanations for each answer</p>
+    </div>
+</div>
+
+<div class="domains-preview">
+    <h2>Available Domains</h2>
+    <div class="domain-categories">
+        <div class="domain-category">
+            <h3>Software & Tech</h3>
+            <ul>
+                <li>Software Development</li>
+                <li>Data Science</li>
+                <li>Machine Learning</li>
+                <li>And more...</li>
+            </ul>
+        </div>
+        <div class="domain-category">
+            <h3>3D & Game Dev</h3>
+            <ul>
+                <li>Unity Development</li>
+                <li>Unreal Engine</li>
+                <li>Blender</li>
+                <li>And more...</li>
+            </ul>
+        </div>
+        <div class="domain-category">
+            <h3>XR Development</h3>
+            <ul>
+                <li>Augmented Reality</li>
+                <li>Virtual Reality</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %} 
